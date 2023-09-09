@@ -71,14 +71,14 @@ a, span, img{
 
 .main a{
     color: rgb(21, 21, 21);
-    width: 160px;
+    width: 200px;
     height: 40px;
     border-radius: 22px;
     background-color: white;
     outline: 2px solid rgb(46, 134, 46);
     border: 3px solid white;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 4px;
 }
 
 .main a:hover{
