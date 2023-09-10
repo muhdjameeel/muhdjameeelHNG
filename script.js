@@ -15,7 +15,7 @@ const currentDay = days[currentDate];
 // Display the Day
 document.getElementById(
   "day"
-).innerHTML = ` <b> Day Of The Week:</b> ${currentDay}`;
+).innerHTML = ` Day Of The Week: ${currentDay}`;
 
 // Time Js
 
@@ -24,7 +24,7 @@ function milliseconds() {
   const currentTime = date.getTime();
   document.getElementById(
     "time"
-  ).innerHTML = ` <b> UTC Time: </b>  ${currentTime}`;
+  ).innerHTML = ` UTC Time:  ${currentTime}`;
 }
 
 // An interval to update the milliseconds every 1000 milliseconds
