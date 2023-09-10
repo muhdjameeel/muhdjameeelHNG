@@ -22,7 +22,7 @@ a, span, img{
 .container{
     width: 70%;
     max-width: 700px;
-    min-width: 280px;
+    min-width: 288px;
     padding: 25px 35px;
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@ a, span, img{
 }
 
 #time{
-    font-size: 32px;
+    font-size: 30px;
     background: -webkit-linear-gradient(#516635, #367713);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
