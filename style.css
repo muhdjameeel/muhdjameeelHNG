@@ -22,7 +22,7 @@ a, span, img{
 .container{
     width: 70%;
     max-width: 700px;
-    min-width: 290px;
+    min-width: 280px;
     padding: 25px 35px;
     display: flex;
     flex-direction: column;
