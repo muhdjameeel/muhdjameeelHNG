@@ -1,30 +1,31 @@
-Number.prototype.pad = function (e) {
-    for (var digit = this.toString(); digit.length < e; digit = "0" + digit);
-    return digit;
-  };
-  
-  function updateClock() {
-    const myDate = new Date();
-      let sec = myDate.getSeconds(),
-      min = myDate.getMinutes(),
-      hou = myDate.getHours(),
-      milli = myDate.getMilliseconds();
-      let meridian = hou < 12 ? 'AM' : 'PM';
-  
-    let tags = ["h", "mins", "secs", "milli"],
-      corr = [hou.pad(2), min.pad(2), sec.pad(2), milli];
-    for (let i = 0; i < tags.length; i++)
-      document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
-      document.getElementById('meridian').innerText = meridian;
-  
+// Days Js
+const date = new Date();
+const currentDate = date.getUTCDay();
+const days = [
+  "Sunday",
+  "Monday",
+  "Teusday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const currentDay = days[currentDate];
 
-    let day = myDate.toLocaleString('default', {weekday: 'long'})
-    document.getElementById("day").textContent = ' Day: ' + day;
-  }
-  
-  let digitalClock = () => {
-    updateClock()
-    setInterval(updateClock, 1);
-  }
-  
-  digitalClock();
+// Display the Day
+document.getElementById(
+  "day"
+).innerHTML = ` <b> Day Of The Week:</b> ${currentDay}`;
+
+// Time Js
+
+function milliseconds() {
+  const date = new Date();
+  const currentTime = date.getTime();
+  document.getElementById(
+    "time"
+  ).innerHTML = ` <b> UTC Time: </b>  ${currentTime}`;
+}
+
+// An interval to update the milliseconds every 1000 milliseconds
+setInterval(milliseconds, 1000);
